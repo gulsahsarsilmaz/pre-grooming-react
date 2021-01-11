@@ -7,14 +7,14 @@ import { Typography, Button } from "@material-ui/core";
 export default function App() {
   const [data, setData] = useState({
     users: [
-      { id: 1, value: "Eric", isChecked: false },
+      { id: 1, value: "Eric", isChecked: true },
       { id: 2, value: "Gulsah", isChecked: true },
       { id: 3, value: "David", isChecked: true },
       { id: 4, value: "Shreya", isChecked: false },
-      { id: 5, value: "Jay", isChecked: false },
+      { id: 5, value: "Jay", isChecked: true },
       { id: 6, value: "Louis", isChecked: false },
-      { id: 7, value: "Thomas", isChecked: false },
-      { id: 8, value: "Baran", isChecked: false }
+      { id: 7, value: "Thomas", isChecked: true },
+      { id: 8, value: "Baran", isChecked: true }
     ]
   });
 
@@ -65,9 +65,13 @@ export default function App() {
         Pick Members
       </Button>
       {filteredData.length > 0 && (
-        <ul>
+        <ul style={{ listStyleType: "none" }}>
           {filteredData.map((data, index) => {
-            return <li key={index}>{data.value}</li>;
+            return (
+              <li key={index}>
+                <Typography>{data.value} 🎉</Typography>
+              </li>
+            );
           })}
         </ul>
       )}
