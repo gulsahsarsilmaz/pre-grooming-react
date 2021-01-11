@@ -1,17 +1,23 @@
 import React from "react";
 
+import { Checkbox, FormControlLabel } from "@material-ui/core";
+
 export const CheckBox = props => {
   return (
-    <li>
-      <input
-        key={props.id}
-        onClick={props.handleCheckChieldElement}
-        type="checkbox"
-        defaultChecked={props.isChecked}
-        value={props.value}
-      />{" "}
-      {props.value}
-    </li>
+    <div>
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={props.isChecked}
+            onChange={props.handleCheckChieldElement}
+            inputProps={{ "aria-label": "primary checkbox" }}
+            name={props.value}
+            value={props.value}
+          />
+        }
+        label={props.value}
+      />
+    </div>
   );
 };
 

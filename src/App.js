@@ -37,10 +37,11 @@ export default function App() {
   };
 
   const handleCheckChieldElement = event => {
+    console.log("I am changed", event.target);
     let users = data.users;
-    users.forEach(fruite => {
-      if (fruite.value === event.target.value)
-        fruite.isChecked = event.target.checked;
+    users.forEach(user => {
+      if (user.value === event.target.value)
+        user.isChecked = event.target.checked;
     });
     setData({ users: users });
   };
@@ -50,12 +51,12 @@ export default function App() {
       <Typography>Welcome To Pre Grooming!</Typography>
       <Typography>Please select last week's pre-grooming members!</Typography>
       <ul>
-        {data.users.map((fruite, index) => {
+        {data.users.map((user, index) => {
           return (
             <CheckBox
               key={index}
               handleCheckChieldElement={handleCheckChieldElement}
-              {...fruite}
+              {...user}
             />
           );
         })}
