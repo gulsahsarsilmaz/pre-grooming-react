@@ -7,14 +7,14 @@ import { Typography, Button } from "@material-ui/core";
 export default function App() {
   const [data, setData] = useState({
     users: [
-      { id: 1, value: "Eric", isChecked: true },
-      { id: 2, value: "Gulsah", isChecked: true },
-      { id: 3, value: "David", isChecked: true },
-      { id: 4, value: "Shreya", isChecked: true },
-      { id: 5, value: "Jay", isChecked: true },
+      { id: 1, value: "Eric", isChecked: false },
+      { id: 2, value: "Gulsah", isChecked: false },
+      { id: 3, value: "David", isChecked: false },
+      { id: 4, value: "Shreya", isChecked: false },
+      { id: 5, value: "Jay", isChecked: false },
       { id: 6, value: "Louis", isChecked: false },
-      { id: 7, value: "Thomas", isChecked: true },
-      { id: 8, value: "Baran", isChecked: true }
+      { id: 7, value: "Thomas", isChecked: false },
+      { id: 8, value: "Baran", isChecked: false }
     ]
   });
 
