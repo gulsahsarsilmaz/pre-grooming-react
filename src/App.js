@@ -10,7 +10,7 @@ export default function App() {
       { id: 1, value: "Eric", isChecked: true },
       { id: 2, value: "Gulsah", isChecked: true },
       { id: 3, value: "David", isChecked: true },
-      { id: 4, value: "Shreya", isChecked: false },
+      { id: 4, value: "Shreya", isChecked: true },
       { id: 5, value: "Jay", isChecked: true },
       { id: 6, value: "Louis", isChecked: false },
       { id: 7, value: "Thomas", isChecked: true },
