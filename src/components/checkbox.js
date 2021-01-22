@@ -13,9 +13,11 @@ export const CheckBox = props => {
             inputProps={{ "aria-label": "primary checkbox" }}
             name={props.value}
             value={props.value}
+            style={{ color: props.isCurrent ? "#fc03f4" : "black" }}
           />
         }
         label={props.value}
+        style={{ color: props.isCurrent ? "#fc03f4" : "black" }}
       />
     </div>
   );
