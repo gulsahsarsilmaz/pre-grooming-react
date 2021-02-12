@@ -37,7 +37,6 @@ export default function App() {
   };
 
   const handleCheckChieldElement = event => {
-    console.log("I am changed", event.target);
     let users = data.users;
     users.forEach(user => {
       if (user.value === event.target.value)
@@ -49,7 +48,7 @@ export default function App() {
   return (
     <>
       <Typography>Welcome To Pre Grooming!</Typography>
-      <Typography>Please select last week's pre-grooming members!</Typography>
+      <Typography>Please select this week's pre-grooming members!</Typography>
       <ul>
         {data.users.map((user, index) => {
           return (
