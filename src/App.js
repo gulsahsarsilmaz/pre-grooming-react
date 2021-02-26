@@ -9,10 +9,10 @@ export default function App() {
     users: [
       { id: 1, value: "Eric", isChecked: true, isCurrent: false },
       { id: 2, value: "Gulsah", isChecked: true, isCurrent: false },
-      { id: 3, value: "David", isChecked: false, isCurrent: false },
-      { id: 4, value: "Shreya", isChecked: false, isCurrent: false },
-      { id: 5, value: "Jay", isChecked: true, isCurrent: true },
-      { id: 6, value: "Louis", isChecked: true, isCurrent: true },
+      { id: 3, value: "David", isChecked: true, isCurrent: true },
+      { id: 4, value: "Shreya", isChecked: true, isCurrent: true },
+      { id: 5, value: "Jay", isChecked: true, isCurrent: false },
+      { id: 6, value: "Louis", isChecked: true, isCurrent: false },
       { id: 7, value: "Thomas", isChecked: false, isCurrent: false },
       { id: 8, value: "Baran", isChecked: false, isCurrent: false }
     ]
