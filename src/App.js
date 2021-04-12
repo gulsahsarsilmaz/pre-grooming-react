@@ -11,8 +11,8 @@ export default function App() {
       { id: 2, value: "Gulsah", isChecked: true, isCurrent: false },
       { id: 3, value: "David", isChecked: true, isCurrent: false },
       { id: 4, value: "Shreya", isChecked: true, isCurrent: false },
-      { id: 5, value: "Jay", isChecked: true, isCurrent: false },
-      { id: 6, value: "Louis", isChecked: true, isCurrent: false },
+      { id: 5, value: "Jay", isChecked: true, isCurrent: true },
+      { id: 6, value: "Louis", isChecked: true, isCurrent: true },
       { id: 7, value: "Thomas", isChecked: true, isCurrent: true },
       { id: 8, value: "Baran", isChecked: true, isCurrent: true }
     ]
