@@ -19,7 +19,7 @@ export const TeamList = props => {
     );
 
     const sortedMembers = unselectedMembers.sort(() => Math.random() - 0.5);
-    const pickedMembers = sortedMembers.slice(0, 2);
+    const pickedMembers = sortedMembers.slice(0, 1);
 
     setfilteredData(pickedMembers);
   };
@@ -35,7 +35,9 @@ export const TeamList = props => {
 
   return (
     <>
-      <Typography style={{ color: "green" }}>
+      <Typography
+        style={{ color: props.teamName === "Green" ? "green" : "blue" }}
+      >
         Please select <strong>{props.teamName}</strong> Grooming members!
       </Typography>
       <ul>
@@ -57,7 +59,14 @@ export const TeamList = props => {
           {filteredData.map((data, index) => {
             return (
               <li key={index}>
-                <Typography>{data.value} 🎉</Typography>
+                <Typography
+                  style={{
+                    color: props.teamName === "Green" ? "green" : "blue",
+                    fontWeight: "bold"
+                  }}
+                >
+                  {data.value} 🎉
+                </Typography>
               </li>
             );
           })}
