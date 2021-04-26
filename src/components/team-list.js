@@ -1,22 +1,10 @@
 import React, { useState } from "react";
-import "./style.css";
-import CheckBox from "./components/checkbox.js";
+import CheckBox from "./checkbox.js";
 
 import { Typography, Button } from "@material-ui/core";
 
-export default function App() {
-  const [data, setData] = useState({
-    users: [
-      { id: 1, value: "Eric", isChecked: false, isCurrent: false },
-      { id: 2, value: "Gulsah", isChecked: true, isCurrent: true },
-      { id: 3, value: "David", isChecked: true, isCurrent: false },
-      { id: 4, value: "Shreya", isChecked: true, isCurrent: true },
-      { id: 5, value: "Jay", isChecked: false, isCurrent: false },
-      { id: 6, value: "Louis", isChecked: true, isCurrent: false },
-      { id: 7, value: "Thomas", isChecked: true, isCurrent: false },
-      { id: 8, value: "Baran", isChecked: true, isCurrent: false }
-    ]
-  });
+export const TeamList = props => {
+  const [data, setData] = useState(props.data);
 
   const [filteredData, setfilteredData] = useState([]);
 
@@ -47,8 +35,9 @@ export default function App() {
 
   return (
     <>
-      <Typography>Welcome To Pre Grooming!</Typography>
-      <Typography>Please select this week's pre-grooming members!</Typography>
+      <Typography style={{ color: "green" }}>
+        Please select <strong>{props.teamName}</strong> Grooming members!
+      </Typography>
       <ul>
         {data.users.map((user, index) => {
           return (
@@ -60,7 +49,7 @@ export default function App() {
           );
         })}
       </ul>
-      <Button variant="contained" color="primary" onClick={handlePickMembers}>
+      <Button variant="contained" color="secondary" onClick={handlePickMembers}>
         Pick Members
       </Button>
       {filteredData.length > 0 && (
@@ -76,4 +65,4 @@ export default function App() {
       )}
     </>
   );
-}
+};
